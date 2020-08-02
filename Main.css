@@ -1,0 +1,271 @@
+html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Verdana, sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 80%;
+    width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*RIGHT PANEL */
+#right-panel{
+    background: #302b2b;
+    position: fixed;
+    top: 0;
+    left: 70%;
+    float: right;
+    width: 30%;
+    height: 100vh;
+    overflow: hidden;
+}
+.full-name{
+    margin: 30% 0 0 0;
+    padding: 0 0 0 10%;
+    color: #ffffff; 
+    font-size: 15px;
+}
+.socials{
+    margin: 0;
+    padding-bottom: 5px;
+}
+.socials p {
+    margin: 50% 0 0 0;
+    padding: 20px 0 0 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px; 
+}
+.list-socials{
+    text-align: center;
+    padding: auto;
+}
+
+.list-socials li{
+    line-height: 1.9em;
+    list-style: none;
+    display: inline;
+    margin: auto;
+    padding: 0 10px 0 0px;
+}
+.list-socials a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.list-socials a:hover {
+    color: #9b9b9b;
+    cursor: pointer;
+}
+
+/*LEFT PANEL*/
+#left-panel{
+    width: 70%;
+    overflow: hidden;
+}
+
+/*GREETING*/
+#welcome-greeting{
+    background-color: #000000;
+    margin: auto;
+    height: 754px;
+    width: 100%;
+}
+.header-color{
+    background: url('./img/bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+}
+#welcome-greeting h1{
+    color: #ffffff;
+    text-align: center;
+    margin: 250px 0 20px 0;
+    font-size: 30px;
+}
+.greeting{
+    min-height: 350px;
+    width: 760px;
+    background-color:  #ffffff;
+    margin: auto;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 5px -1px rgba(226, 190, 190, 0.75);
+}
+.greeting p{
+    color: #000000;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+
+}
+
+/*EDUCATION*/
+#myEducation{
+    margin-top: 20px;
+}
+.education-wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2em;
+    margin: auto ;
+    width: 700px;
+    padding: 20px;
+}
+.education h1{
+    font-size: 35px;
+    margin: 60px 0 0 0;
+}
+.education img{
+    width: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+/*SKILLS*/
+#mySkills{
+    background-color: #000000;
+    height: 500px;
+    margin: auto;
+}
+.skills-container{
+    margin-top: 20px;
+    background: #000000;
+    text-align: center;
+    height: 550px;
+    color: #ffffff;
+    padding-top: 20px;
+}
+.skills-wrapper{
+    margin: auto ;
+    width: 700px;
+}
+.skills-wrapper{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: auto ;
+    padding: 20px;
+}
+.skills-wrapper > div{
+    padding: 1em;
+}
+.skills-wrapper img{
+    width: 100px;
+}
+.skills-wrapper .logo-box{
+    margin-top: auto;
+}
+
+/*PROJECTS*/
+#myProjects{
+    margin: 10px 0 10px 0;
+    background: #a79a9a;
+    min-height: 180px;
+    padding: 0;
+}
+.projects p{
+    text-align: center;
+    font-size: 40px;
+}
+footer{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+}
+
+/*Media Queries*/
+@media(max-width:1450px){
+   #right-panel{
+    position: unset;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    } 
+    .full-name{
+        margin: 70px 0 0 0;
+        text-align: center;
+        padding: 0;
+    }
+    .socials{
+        background-color: #302b2b;
+        margin: 50px 0 0 0;
+        padding: 0;
+    }
+    .socials p{
+        margin: 10px 0 0 20px;
+        text-align: center;
+    }
+    .list-socials{
+        text-align: center;
+        margin: 0 20px 0 0;
+    }
+    .list-socials li{
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        display: inline;
+    }
+   #left-panel{
+       width: 100%;
+   }
+}
+@media(max-width:1110px){
+    .greeting{
+        width: 90%;
+    }
+    .greeting p{
+        padding: 0 0 10px 0;
+    }
+    .education-wrapper{
+        float: none;
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding-bottom: 40px;
+        text-align: center;
+        box-sizing: border-box;
+     }
+     .education img{
+         margin: 0 20px 0 0;
+     }
+}
+@media(max-width: 880px){
+    .skills-wrapper{
+        float: none;
+        width: 80%;
+    }
+    .projects{
+        padding-bottom: 10px;
+    }
+}
+@media(max-width: 720px){
+    #welcome-greeting h1{
+        font-size: 25px;
+    }
+    .greeting{
+        width: 90%;
+    }
+    .greeting p {
+        font-size: 2.5vw;
+        margin: 35px 0 0 0;
+        padding: 0 0 0 0;
+        line-height: 2;
+    }
+    .education img{
+        padding-left: 25px;
+    }
+    .skills-wrapper img{
+        width: 60px;
+        padding-right: 20px;
+    }
+}
