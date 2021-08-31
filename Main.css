@@ -27,20 +27,27 @@ body{
     height: 100vh;
     overflow: hidden;
 }
-.full-name{
-    margin: 30% 0 0 0;
+.name-container{
+    margin: 50% 0 0 0;
     padding: 0 0 0 10%;
     color: #ffffff; 
+    text-align: right;
+}
+
+.name-container h1{
+    font-size: 30px;
+}
+.name-container h3{
     font-size: 15px;
 }
 .socials{
     margin: 0;
     padding-bottom: 5px;
+    text-align: center;
 }
 .socials p {
     margin: 50% 0 0 0;
     padding: 20px 0 0 20px;
-    text-align: center;
     color: #ffffff;
     font-size: 20px; 
 }
@@ -75,7 +82,7 @@ body{
 #welcome-greeting{
     background-color: #000000;
     margin: auto;
-    height: 754px;
+    height: 760px;
     width: 100%;
 }
 .header-color{
@@ -83,6 +90,15 @@ body{
     background-size: cover;
     height: 400px;
 }
+
+.greeting-container{
+    max-width: 80%;
+    width: 800px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    overflow: hidden;
+} 
+
 #welcome-greeting h1{
     color: #ffffff;
     text-align: center;
@@ -96,7 +112,7 @@ body{
     margin: auto;
     padding: 0 10px 0 10px;
     border-radius: 10px;
-    box-shadow: 3px 4px 5px -1px rgba(226, 190, 190, 0.75);
+    box-shadow: 0px 0px 9px 1px rgba(226, 190, 190, 0.75);
 }
 .greeting p{
     color: #000000;
@@ -122,6 +138,15 @@ body{
 .education h1{
     font-size: 35px;
     margin: 60px 0 0 0;
+}
+
+.education h4{
+    font-size: 15px;
+}
+.education h6{
+    font-size: 11px;
+    font-weight: lighter;
+    line-height: 0;
 }
 .education img{
     width: 300px;
@@ -162,18 +187,82 @@ body{
 .skills-wrapper .logo-box{
     margin-top: auto;
 }
+.sqllogo img{
+    padding-top: 20px;
+}
+
 
 /*PROJECTS*/
 #myProjects{
-    margin: 10px 0 10px 0;
-    background: #a79a9a;
+    margin: 10px 0 20px 0;
+    /*background: #a79a9a;*/
     min-height: 180px;
     padding: 0;
 }
-.projects p{
+
+.project-section-title{
     text-align: center;
-    font-size: 40px;
+    font-size: 2em;
 }
+
+.project-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'left-image right-description';
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+}
+
+.first-project{
+    display: grid;
+    grid-area: left-image;
+    margin: 0;
+    justify-content: center;
+    height: 200px;
+    
+}
+
+.project-img{
+    height: auto;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-img:hover{
+    opacity: 0.8;
+}
+
+.first-project-description{
+    display: grid;
+    grid-area: right-description;
+    justify-content: center;
+    margin: 0 0 0 20px;
+}
+
+.first-project-description h1{
+    text-align: center;
+    margin:-5px 0 0 -10px;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.project-description{
+    padding: 0 0 0 20px;
+}
+
+.project-languages{
+    margin: 0 0 0 10px;
+}
+
+.project-languages h4{
+    font-weight: lighter;
+    word-spacing: 5px;
+}
+
+
 footer{
     float: left;
     width: 100%;
@@ -192,7 +281,7 @@ footer{
     margin: auto;
     overflow: hidden;
     } 
-    .full-name{
+    .name-container{
         margin: 70px 0 0 0;
         text-align: center;
         padding: 0;
@@ -201,14 +290,15 @@ footer{
         background-color: #302b2b;
         margin: 50px 0 0 0;
         padding: 0;
+        text-align: center;
     }
     .socials p{
-        margin: 10px 20px 0 0;
+        margin: 10px 30px 0 20px;
         text-align: center;
     }
     .list-socials{
         text-align: center;
-        margin: 0 35px 0 0;
+        margin: 0 20px 0 0;
     }
     .list-socials li{
         margin: 0 0 0 0;
@@ -239,19 +329,38 @@ footer{
          margin: 0 20px 0 0;
      }
 }
+
+@media(max-width: 990px){
+    .project-list{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'left-image'
+            'right-description';
+    }
+    .first-project{
+        display: grid;
+        justify-content: center;
+        margin: 10px;
+        height: auto;
+    }
+    .project-img{
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .project-languages h4{
+        text-align: center;
+    }
+}
 @media(max-width: 880px){
     .skills-wrapper{
         float: none;
         width: 80%;
     }
-    .projects{
-        padding-bottom: 10px;
-    }
 }
 @media(max-width: 720px){
-    #welcome-greeting{ 
-        height:800px;
-    }
     #welcome-greeting h1{
         font-size: 25px;
     }
@@ -259,62 +368,16 @@ footer{
         width: 90%;
     }
     .greeting p {
-        font-size: 2.8vw;
+        font-size: 2.5vw;
         margin: 35px 0 0 0;
         padding: 0 0 0 0;
         line-height: 2;
     }
     .education img{
-        padding-left: 10px;
+        padding-left: 25px;
     }
     .skills-wrapper img{
         width: 60px;
         padding-right: 20px;
-    }
-}
-
-@media(max-width:500px){
-    #welcome-greeting{
-        height: 700px;
-    }
-    .education img{
-        width: 60vw;
-    }
-    #myProjects{
-        width: 100vw;
-    }
-    footer p{
-        font-size: 3vw;
-    }
-}
-
-@media(max-width:420px){
-    .full-name h1{
-        font-size: 5.5vw;
-    }
-    .full-name p{
-        font-size: 2.8vw;
-    }
-    .socials p{
-        font-size: 3.5vw;
-    }
-    #welcome-greeting h1{
-        font-size: 20px;
-    }
-    .greeting{
-        width: 60vw;
-    }
-    .greeting p{
-        font-size: 2.7vw;
-    }
-    .skills-container{
-        width: 100vw;
-    }
-    .skills-container h1{
-        font-size: 6vw;
-    }
-    .skills-wrapper img{
-        width: 13vw;
-        padding-right: 15px;
     }
 }
